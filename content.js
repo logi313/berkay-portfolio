@@ -18,9 +18,9 @@ window.PORTFOLIO = {
   },
   about: {
     poster: 'assets/original-09.webp', video: 'assets/about.mp4', playbackRate: 0.72,
-    headline: 'Human imagination.\nNew possibilities.',
-    bio: 'I’m Berkay, an AI artist and filmmaker exploring the space between cinematic storytelling and emerging technology.',
-    approach: 'My work moves between narrative films, commercial imagery and experiments in motion. Different formats. The same attention to feeling, rhythm and detail.'
+    headline: 'THE PERSON\nBEHIND THE WORK',
+    bio: 'I’m Berkay, an AI artist and filmmaker working across visual storytelling, commercial direction, and experimental motion.',
+    approach: 'Bridging cutting-edge neural models with cinematic composition to engineer visual worlds for a wider tomorrow.'
   },
   socials: { Instagram: '', Vimeo: '', Behance: '', LinkedIn: '' },
   categories: [
