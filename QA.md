@@ -12,11 +12,13 @@
 - Bölüm geçişi: masaüstünde tek tekerlek tıkı, trackpad savurması ve hızlı çevirme tam bir bölüm ilerletiyor; 1366×657 ve 1280×600 dahil kısa pencerelerde de bölümler ekrana sığıyor, içerik taşmıyor.
 - Menü, bölüm noktaları, ok tuşları ve #commercials gibi bağlantılar doğru bölüme gidiyor; görünür bölümün önizlemesi oynuyor.
 - Kısa video şeridi tekerlekle kart kart kayıyor; sonunda About'a geçiyor.
-- Proje seçme, pencereyi açma, sonraki proje, Escape ile kapatma, doğrudan proje bağlantısı ve e-posta kopyalama çalışıyor.
+- Proje seçme, pencereyi açma, önceki/sonraki kartları, Escape ile kapatma, doğrudan proje bağlantısı ve e-posta kopyalama çalışıyor.
+- Proje penceresi 1920×1080'den 390×844'e 8 boyutta kaydırmadan tek ekrana sığıyor; video 16:9 kalıyor.
+- Bölüm sırası: Commercials, Short-form, Films.
 - Konsol hatası yok. Pencere kapanınca yarıda kesilen film indirmeleri dışında başarısız dosya isteği yok.
 
 ## Filmler (assets/films)
-19 dosya, toplam 766 MB (site 804 MB). En büyük dosya 94,6 MB: GitHub Pages'in 100 MB dosya ve 1 GB site sınırının altında.
+19 dosya, toplam 750 MB (site 788 MB). En büyük dosya 94,2 MB: GitHub Pages'in 100 MB dosya ve 1 GB site sınırının altında.
 H.264 High, x264 veryslow iki geçiş, tune film, aq-mode 3. Filmler 1080p, kısa videolar kendi 720p boyutunda. Ses kaynaktan kopyalandı, yeniden kodlanmadı. Kalite her dosyada kaynağa karşı VMAF ile ölçüldü (95 üstü gözle ayırt edilemez kabul edilir).
 
 | Dosya | Boyut | VMAF |
@@ -27,7 +29,7 @@ H.264 High, x264 veryslow iki geçiş, tune film, aq-mode 3. Filmler 1080p, kıs
 | one-last-message | 93,8 MB | 97,53 |
 | fix-this-plumbing | 47,5 MB | 98,37 |
 | real-estate | 49,0 MB | 98,15 |
-| the-impossible-drive | 94,6 MB | 98,64 |
+| the-impossible-drive (ilk 10,8 sn kesildi) | 78,2 MB | 98,90 |
 | showreel | 93,9 MB | 98,66 |
 | 11 kısa video | 12,1–12,6 MB | 96,89–99,28 |
 
