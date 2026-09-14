@@ -252,6 +252,7 @@
   }
   // Film player: our own controls over the video (acid progress line, time, sound, full screen), faded out while a film plays.
   const stage = $('.player-stage'), progress = $('.player-progress'), playedBar = $('.player-played'), bufferedBar = $('.player-buffered');
+  const volumeSlider = $('.player-volume-slider'), volumeLevel = $('.player-volume-level');
   const clock = seconds => { const s = Number.isFinite(seconds) ? Math.floor(seconds) : 0; return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`; };
   let idleTimer, frameLoop = 0;
   function filmMode(on) {
@@ -273,6 +274,10 @@
     stage.classList.toggle('is-muted', player.muted);
     $('.player-play').setAttribute('aria-label', player.paused ? 'Play' : 'Pause');
     $('.player-mute').setAttribute('aria-label', player.muted ? 'Unmute' : 'Mute');
+    const heard = player.muted ? 0 : player.volume;
+    volumeLevel.style.transform = `scaleX(${heard})`;
+    volumeSlider.setAttribute('aria-valuenow', String(Math.round(heard * 100)));
+    volumeSlider.setAttribute('aria-valuetext', `${Math.round(heard * 100)}%`);
   }
   function wakeControls() {
     stage.classList.add('ui-awake'); clearTimeout(idleTimer);
@@ -305,7 +310,22 @@
   });
   stage.addEventListener('dblclick', event => { if (filmActive() && lastPointer === 'mouse' && !event.target.closest('.player-bar')) toggleFullscreen(); });
   $('.player-play').addEventListener('click', togglePlay);
-  $('.player-mute').addEventListener('click', () => { player.muted = !player.muted; });
+  // Volume: the slider sets the level, the speaker toggles mute. The level is remembered on this device.
+  // iPhone ignores volume from script (hardware buttons only), so there the slider is hidden and mute stays.
+  const toggleMute = () => { player.muted = !player.muted; if (!player.muted && player.volume === 0) player.volume = 1; };
+  function setVolume(level) {
+    player.volume = Math.max(0, Math.min(1, level)); player.muted = player.volume === 0;
+    try { localStorage.setItem('film-volume', String(player.volume)); } catch {}
+    paintPlayer();
+  }
+  try { const saved = parseFloat(localStorage.getItem('film-volume')); if (saved > 0 && saved <= 1) player.volume = saved; } catch {}
+  const probe = document.createElement('video'); probe.volume = .5;
+  if (probe.volume !== .5) stage.classList.add('no-volume');
+  $('.player-mute').addEventListener('click', toggleMute);
+  const slideVolume = event => { const rect = volumeSlider.getBoundingClientRect(), level = (event.clientX - rect.left) / rect.width; setVolume(level < .05 ? 0 : level); };
+  volumeSlider.addEventListener('pointerdown', event => { volumeSlider.setPointerCapture(event.pointerId); stage.classList.add('is-sliding'); slideVolume(event); });
+  volumeSlider.addEventListener('pointermove', event => { if (volumeSlider.hasPointerCapture(event.pointerId)) slideVolume(event); wakeControls(); });
+  ['pointerup', 'pointercancel'].forEach(type => volumeSlider.addEventListener(type, () => stage.classList.remove('is-sliding')));
   $('.player-fullscreen').addEventListener('click', toggleFullscreen);
   ['fullscreenchange', 'webkitfullscreenchange'].forEach(type => document.addEventListener(type, () => stage.classList.toggle('is-fullscreen', fullscreenElement() === stage)));
   const scrub = event => {
@@ -320,8 +340,10 @@
     if (!filmActive() || event.metaKey || event.ctrlKey || event.altKey || event.target.closest('a[href]')) return;
     const onButton = event.target.closest('button');
     const key = event.key.length === 1 ? event.key.toLowerCase() : event.key;
-    const actions = {' ': togglePlay, k: togglePlay, ArrowLeft: () => seekBy(-5), ArrowRight: () => seekBy(5), m: () => { player.muted = !player.muted; }, f: toggleFullscreen,
+    const actions = {' ': togglePlay, k: togglePlay, ArrowLeft: () => seekBy(-5), ArrowRight: () => seekBy(5), m: toggleMute, f: toggleFullscreen,
+      ArrowUp: () => setVolume((player.muted ? 0 : player.volume) + .1), ArrowDown: () => setVolume((player.muted ? 0 : player.volume) - .1),
       Home: () => { if (event.target === progress) { player.currentTime = 0; paintPlayer(); } }, End: () => { if (event.target === progress && player.duration) { player.currentTime = player.duration - .1; paintPlayer(); } }};
+    if (event.target === volumeSlider) Object.assign(actions, {ArrowRight: actions.ArrowUp, ArrowLeft: actions.ArrowDown, Home: () => setVolume(0), End: () => setVolume(1)});
     if (!actions[key] || (onButton && (key === ' ' || key === 'Enter'))) return;
     event.preventDefault(); actions[key](); wakeControls();
   });
