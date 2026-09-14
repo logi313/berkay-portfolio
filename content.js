@@ -56,7 +56,7 @@ window.PORTFOLIO = {
         { id: 'vr-show', title: 'Virtual Legend', type: 'Visual narrative',
           description: 'A new VR headset turns a quiet night in into a battle for another world.', poster: 'assets/film-vr-poster.jpg', focal: '50% 50%', preview: 'assets/film-vr-preview.mp4', film: 'assets/films/vr-show.mp4', previewLength: 0, captions: '' },
         { id: 'the-systems-compass', title: 'The Systems Compass', type: 'Science-fiction film',
-          description: 'A hopeful vision of tomorrow, where people, science and shared systems learn to move as one.', poster: 'assets/film-systems-poster.jpg', focal: '50% 50%', preview: 'assets/film-systems-preview.mp4', film: 'assets/films/the-systems-compass.mp4', previewLength: 0, captions: '' },
+          description: 'Made for XPRIZE Futurevision. A hopeful vision of tomorrow, where people, science and shared systems learn to move as one.', poster: 'assets/film-systems-poster.jpg', focal: '50% 50%', preview: 'assets/film-systems-preview.mp4', film: 'assets/films/the-systems-compass.mp4', previewLength: 0, captions: '' },
         { id: 'samurai', title: 'Dragonfall', type: 'Cinematic short',
           description: 'A lone warrior meets a force larger than legend beneath a storm-dark sky.', poster: 'assets/film-samurai-poster.jpg', focal: '50% 50%', preview: 'assets/film-samurai-preview.mp4', film: 'assets/films/samurai.mp4', previewLength: 0, captions: '' }
       ]
