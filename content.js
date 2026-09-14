@@ -7,7 +7,7 @@
 */
 window.PORTFOLIO = {
   email: 'hello@berkayalioglu.com',
-  location: 'Bursa, Turkey',
+  location: 'Turkey · 40.1885° N, 29.0610° E',
   role: 'AI artist & filmmaker',
   showreel: {
     title: 'Showreel', description: 'A glimpse into my world of image and motion.',

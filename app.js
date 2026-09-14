@@ -94,7 +94,7 @@
   $$('.email-link, .contact-heading, .project-contact').forEach(a => a.href = mail);
   $('.email-link').textContent = data.email;
   $('.year').textContent = new Date().getFullYear();
-  $('.about-location').firstChild.textContent = data.location.toUpperCase() + ' ';
+  $('.about-location').textContent = data.location.toUpperCase();
   Object.entries(data.socials).forEach(([name, url]) => {
     if (!url || !/^https?:\/\//.test(url)) return;
     const a = document.createElement('a'); a.textContent = name + ' ↗'; a.href = url; a.target = '_blank'; a.rel = 'noopener noreferrer'; $('.social-links').append(a);
