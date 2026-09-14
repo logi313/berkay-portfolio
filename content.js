@@ -33,7 +33,7 @@ window.PORTFOLIO = {
         { id: 'real-estate', title: 'One Door Closed', type: 'Commercial film', year: '', role: 'AI filmmaking',
           description: 'A home loan falls through, and a young couple finds another way home.', poster: 'assets/commercial-real-estate-poster.jpg', focal: '50% 50%', preview: 'assets/commercial-real-estate-preview.mp4', film: 'assets/films/real-estate.mp4', previewLength: 0, captions: '' },
         { id: 'the-impossible-drive', title: 'The Impossible Drive', type: 'Automotive film', year: '', role: 'AI filmmaking',
-          description: 'An automotive journey that bends landscape, motion and possibility.', poster: 'assets/commercial-impossible-drive-poster.jpg?v=2', focal: '50% 50%', preview: 'assets/commercial-impossible-drive-preview.mp4?v=2', film: 'assets/films/the-impossible-drive.mp4', previewLength: 0, captions: '' }
+          description: 'An automotive journey that bends landscape, motion and possibility.', poster: 'assets/commercial-impossible-drive-poster.jpg?v=2', focal: '50% 50%', preview: 'assets/commercial-impossible-drive-preview.mp4?v=2', film: 'assets/films/the-impossible-drive.mp4?v=2', previewLength: 0, captions: '' }
       ]
     },
     { id: 'short-form', number: '02', title: 'Short-form',
