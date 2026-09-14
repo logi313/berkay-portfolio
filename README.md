@@ -23,7 +23,7 @@ Tüm içerik **content.js** dosyasında. Videoları `assets` klasörüne koy ve 
 ```
 
 - `preview`: sessiz, kısa arka plan videosu. Tercihen ayrı ve hafif bir dosya. Beş saniyeden kısaysa doğal sonundan döner.
-- `film`: sesli, tam video. Bu alan dolunca “Explore project” otomatik olarak “Watch film” olur.
+- `film`: sesli, tam video. Bu alan dolunca “Explore” otomatik olarak “Play” olur.
 - `poster`: video başlamadan önce, kartta ve video açılamadığında gösterilen görsel. Ana arka planda kaliteli görünmesi için yüksek çözünürlüklü bir kare kullan.
 - Proje listelerine aynı biçimde yeni kayıt ekleyebilirsin. Kart şeridi kaydırılabilir, sayı sınırı yok; üstteki Work sayacı kendini günceller.
 - Açıklamaları, yılı ve disiplin bilgisini kendi kredilerinle güncelle.
@@ -32,7 +32,7 @@ Tüm içerik **content.js** dosyasında. Videoları `assets` klasörüne koy ve 
 
 Tam filmler sitenin içinde, `assets/films/` klasöründe duruyor ve sitenin kendi oynatıcısında açılıyor (Vimeo yok, yönlendirme yok). Oynatıcıda ince yeşil ilerleme çizgisi, süre, ses ve tam ekran var; film oynarken kontroller kendiliğinden gizlenir. Klavye: boşluk veya K oynat/duraklat, ←/→ 5 saniye, M ses, F tam ekran. Telefonda ilk dokunuş kontrolleri gösterir, ikincisi oynatır/duraklatır.
 
-Bir projeye film bağlamak için `content.js` içinde `film` alanına dosya yolunu yaz: `film: 'assets/films/vr-show.mp4'`. Alan doluysa proje düğmesi "Watch film" olur.
+Bir projeye film bağlamak için `content.js` içinde `film` alanına dosya yolunu yaz: `film: 'assets/films/vr-show.mp4'`. Alan doluysa proje düğmesi "Play" olur.
 
 Yeni bir filmi web için hazırlarken kaliteyi korumak ve GitHub'ın 100 MB dosya sınırında kalmak için iki geçişli kodlama kullan. Önce video bitrate'ini hesapla: `(94 MB × 8 ÷ süre saniye) − ses bitrate'i`, en fazla 12000 kbps. Sonra:
 
@@ -61,7 +61,7 @@ Intro, videonun ilk 1,5 saniyesi inmeden başlamaz; 3 saniye içinde başlayamaz
 
 ## Showreel ve gözlük videosu
 
-`showreel` altındaki `preview` açılış ekranının arkasında dönen sessiz önizleme, `poster` ilk kare. Tam showreel'i Vimeo'ya yükleyince linkini `film` alanına koy; "Watch showreel" onu açar.
+`showreel` altındaki `preview` açılış ekranının arkasında dönen sessiz önizleme, `poster` ilk kare. Tam showreel `film` alanındaki `assets/films/showreel.mp4`; "Watch showreel" onu sitenin oynatıcısında açar.
 
 Gözlük videosu `about.video` alanında. Orijinal videonun ortadaki hareketli katmanı ve geniş arka planı korundu. `about.poster` geniş sabit arka planıdır. Aynı konsepti sürdürürken ikisini uyumlu güncelle.
 

@@ -310,3 +310,6 @@ a:focus-visible,button:focus-visible,video:focus-visible{outline-color:var(--pap
   .pager-next{text-align:right}
   .pager-thumb{width:100%}
 }
+
+/* Comfortable touch targets on phones without moving anything: the tap area grows, the layout does not. */
+@media(max-width:600px){.site-header .monogram,.email-link,.category-next{padding-block:12px;margin-block:-12px}}
