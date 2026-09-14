@@ -220,12 +220,9 @@
     $('#dialog-title').textContent = item.title;
     $('.detail-type').textContent = item.type || item.label || item.category;
     $('.detail-description').textContent = item.description;
-    $('.detail-role').textContent = item.role || data.role;
-    $('.detail-year').textContent = item.year || '';
-    $('.detail-year-wrap').hidden = !item.year;
     $('.player-poster').src = item.poster; $('.player-poster').alt = item.title; $('.player-poster').hidden = false;
     player.poster = item.poster; player.hidden = false; $('.media-notice').hidden = true;
-    $('.next-project').hidden = id === 'showreel';
+    fillPager(id);
     $('.dialog-scroll').scrollTop = 0;
     const vimeo = item.film ? vimeoPlayerURL(item.film) : null;
     if (vimeo) {
@@ -358,10 +355,24 @@
     if (event.shiftKey && document.activeElement === first) {event.preventDefault();last.focus();}
     else if (!event.shiftKey && document.activeElement === last) {event.preventDefault();first.focus();}
   });
-  $('.next-project').addEventListener('click', () => {
-    const list = [...projects.keys()].filter(id => id !== 'showreel'), next = list[(list.indexOf(activeProject) + 1) % list.length];
-    openProject(next, null, false); history.replaceState({project:next}, '', '#project/' + encodeURIComponent(next));
-  });
+  // Previous / next cards under a film: every project in site order, wrapping around. Hidden for the showreel.
+  const pagerList = () => [...projects.keys()].filter(key => key !== 'showreel');
+  const neighbour = (id, step) => { const list = pagerList(); return list[(list.indexOf(id) + step + list.length) % list.length]; };
+  function fillPager(id) {
+    $('.project-pager').hidden = id === 'showreel';
+    if (id === 'showreel') return;
+    [['.pager-prev', -1], ['.pager-next', 1]].forEach(([selector, step]) => {
+      const card = $(selector), target = projects.get(neighbour(id, step));
+      card.dataset.project = target.id;
+      $('img', card).src = target.poster;
+      $('.pager-title', card).textContent = target.title;
+      card.setAttribute('aria-label', `${step < 0 ? 'Previous' : 'Next'} project: ${target.title}`);
+    });
+  }
+  $$('.pager-card').forEach(card => card.addEventListener('click', () => {
+    const target = card.dataset.project;
+    openProject(target, null, false); history.replaceState({project:target}, '', '#project/' + encodeURIComponent(target));
+  }));
   $$('[data-open]').forEach(button => button.addEventListener('click', () => openProject(button.dataset.open, button)));
   function route() {
     const id = location.hash.startsWith('#project/') ? decodeURIComponent(location.hash.slice(9)) : null;
