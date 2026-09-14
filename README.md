@@ -11,8 +11,6 @@ Tüm içerik **content.js** dosyasında. Videoları `assets` klasörüne koy ve 
   id: 'the-last-message',       // Kalıcı proje bağlantısı; sonradan değiştirme.
   title: 'The Last Message',
   type: 'Narrative film',
-  year: '2026',
-  role: 'AI direction & editing',
   description: 'Gerçek projenin kısa açıklaması.',
   poster: 'assets/the-last-message.webp',
   focal: '62% 50%',            // Ana karakterin / ürünün kadrajdaki konumu.
