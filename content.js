@@ -37,7 +37,7 @@ window.PORTFOLIO = {
     },
     { id: 'short-form', number: '02', title: 'Short-form',
       projects: [
-        { id: 'eyewear', title: 'City Frames', type: 'Eyewear spot', description: 'One pair of frames, and the whole city looks different.', poster: 'assets/short-eyewear-poster.jpg', focal: '50% 50%', preview: 'assets/short-eyewear-preview.mp4', film: 'assets/films/eyewear.mp4', previewLength: 0, captions: '' },
+        { id: 'eyewear', title: 'City Frames', type: 'Eyewear spot', description: 'New frames, a new way to see the city.', poster: 'assets/short-eyewear-poster.jpg', focal: '50% 50%', preview: 'assets/short-eyewear-preview.mp4', film: 'assets/films/eyewear.mp4', previewLength: 0, captions: '' },
         { id: 'camera-motion', title: 'Through the Lens', type: 'Camera spot', description: 'First light on the mountain, and the one frame worth keeping.', poster: 'assets/short-camera-motion-poster.jpg?v=3', focal: '50% 50%', preview: 'assets/short-camera-motion-preview.mp4?v=2', film: 'assets/films/camera-motion.mp4', previewLength: 0, captions: '' },
         { id: 'drink-ad', title: 'Poolside Sparkle', type: 'Drink spot', description: 'A lazy afternoon on a pool float, and one ice-cold can.', poster: 'assets/short-drink-ad-poster.jpg?v=3', focal: '50% 50%', preview: 'assets/short-drink-ad-preview.mp4?v=2', film: 'assets/films/drink-ad.mp4', previewLength: 0, captions: '' },
         { id: 'bed', title: 'The Bed Commute', type: 'Bed spot', description: 'Too comfortable to get up, he takes his bed to the office.', poster: 'assets/short-bed-poster.jpg', focal: '50% 50%', preview: 'assets/short-bed-preview.mp4', film: 'assets/films/bed.mp4', previewLength: 0, captions: '' },
