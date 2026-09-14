@@ -278,7 +278,7 @@ a:focus-visible,button:focus-visible,video:focus-visible{outline-color:var(--pap
 .dialog-info{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:max(24px,calc(48 * var(--u)));padding:max(18px,calc(26 * var(--u))) 0 max(22px,calc(30 * var(--u)))}
 .project-detail{padding:0;min-width:0}
 .project-detail h2{font-size:max(26px,calc(40 * var(--u)));margin-top:max(6px,calc(10 * var(--u)));white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.detail-description{margin-top:max(8px,calc(12 * var(--u)));max-width:max(460px,calc(640 * var(--u)));display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.detail-description{margin-top:max(8px,calc(12 * var(--u)));max-width:max(600px,calc(760 * var(--u)));display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .project-pager{display:flex;gap:max(12px,calc(16 * var(--u)))}
 .pager-card{display:flex;align-items:center;gap:max(12px,calc(14 * var(--u)));width:max(252px,calc(300 * var(--u)));padding:max(8px,calc(10 * var(--u)));border:1px solid var(--line);text-align:left;color:var(--paper);min-width:0;transition:border-color .2s}
 .pager-next{flex-direction:row-reverse;text-align:right}
@@ -304,6 +304,7 @@ a:focus-visible,button:focus-visible,video:focus-visible{outline-color:var(--pap
   .dialog-actions{gap:18px}
   .dialog-info{grid-template-columns:1fr;gap:22px;padding:22px 0 28px}
   .project-detail h2{font-size:30px;white-space:normal}
+  .detail-description{display:block;overflow:visible}
   .project-pager{display:grid;grid-template-columns:1fr 1fr;gap:10px}
   .pager-card,.pager-next{width:auto;flex-direction:column;align-items:stretch;text-align:left;gap:8px;padding:8px}
   .pager-next{text-align:right}
