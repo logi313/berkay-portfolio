@@ -240,6 +240,9 @@ a:focus-visible,button:focus-visible,video:focus-visible{outline-color:var(--pap
 .player-stage.is-fullscreen .full-player{max-height:none}
 @media(max-width:600px){.player-center{width:60px;height:60px;margin:-30px 0 0 -30px}.player-volume-slider{width:56px}}
 
+/* Outside the wide-screen layout --u is a plain pixel, so the floors below hold on tablets too. */
+:root{--u:1px}
+@media(min-width:1001px) and (min-aspect-ratio:5/4){:root{--u:min(calc(100vw / 1920),calc(100svh / 900))}}
 /* Type scale: three readable steps for everything below the headlines.
    Labels (uppercase), UI text (links, names, controls) and body copy. Each scales with the screen but never drops below its floor. */
 .micro,.chapter-number,.header-role,.hero-footer .micro,.hero-footer .scroll-link,.about-location,.back-top,.dialog-category,.detail-type,.detail-credits dt,.catalog-scroll-hint,.reel-caption,.footer-brand>span{font-size:max(11px,calc(12 * var(--u)));font-weight:500;letter-spacing:.1em}
@@ -258,3 +261,13 @@ a:focus-visible,button:focus-visible,video:focus-visible{outline-color:var(--pap
   .main-nav a,.project-tab .tab-name,.project-tabs .tab-name,.tab-number,.launch-label,.category-next,.footer-brand,.dialog-close,.next-project,.project-contact,.detail-role,.reel-launch,.player-time{font-size:13px}
   .about-bio,.about-approach,.project-summary,.detail-description{font-size:15px}
 }
+
+/* Project play button: label first, a larger circle to its right. Active project in the strip is marked in acid. */
+.project-launch .launch-label{font-weight:500;letter-spacing:.14em;text-transform:uppercase}
+.project-actions .small-play{width:max(42px,calc(50 * var(--u)));height:max(42px,calc(50 * var(--u)))}
+.project-actions .small-play svg{width:max(16px,calc(20 * var(--u)));height:max(16px,calc(20 * var(--u)));margin-left:2px}
+.project-launch{gap:max(14px,calc(16 * var(--u)))}
+.tab-check svg{width:58%;height:58%;display:block}
+.project-tab[aria-selected=true] .tab-check{background:var(--acid)}
+.project-tab[aria-selected=true],#scene-short-form .project-tab[aria-selected=true]{border-bottom-color:var(--acid);box-shadow:0 1px 0 var(--acid)}
+@media(max-width:600px),(max-width:1000px) and (max-height:500px){.project-actions .small-play{width:44px;height:44px}.project-actions .small-play svg{width:17px;height:17px}}
