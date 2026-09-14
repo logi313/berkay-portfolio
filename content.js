@@ -19,8 +19,8 @@ window.PORTFOLIO = {
   about: {
     poster: 'assets/original-09.webp', video: 'assets/about.mp4', playbackRate: 0.72,
     headline: 'THE PERSON\nBEHIND THE WORK',
-    bio: 'I’m Berkay, an AI artist and filmmaker working across visual storytelling, commercial direction, and experimental motion.',
-    approach: 'Bridging cutting-edge neural models with cinematic composition to engineer visual worlds for a wider tomorrow.'
+    bio: 'I’m Berkay, an AI artist and filmmaker working across visual storytelling, advertising and experimental film.',
+    approach: 'I use generative tools as part of the creative process from early concepts and visual development to motion and final frame.'
   },
   socials: { Instagram: '', Vimeo: '', Behance: '', LinkedIn: '' },
   categories: [
