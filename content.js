@@ -11,7 +11,7 @@ window.PORTFOLIO = {
   role: 'AI artist & filmmaker',
   showreel: {
     title: 'Showreel', description: 'A glimpse into my world of image and motion.',
-    poster: 'assets/showreel-poster.jpg', preview: 'assets/showreel-preview.mp4?v=5',
+    poster: 'assets/showreel-poster.jpg', preview: 'assets/showreel-preview.mp4?v=6',
     film: 'assets/films/showreel.mp4', previewStart: 0, previewLength: 0,
     label: 'Showreel preview', role: 'AI artist & filmmaker', year: '2026',
     captions: '', demo: false
