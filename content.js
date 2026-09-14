@@ -24,17 +24,7 @@ window.PORTFOLIO = {
   },
   socials: { Instagram: '', Vimeo: '', Behance: '', LinkedIn: '' },
   categories: [
-    { id: 'films', number: '01', title: 'Films',
-      projects: [
-        { id: 'vr-show', title: 'Virtual Legend', type: 'Visual narrative', year: '', role: 'AI filmmaking',
-          description: 'A new VR headset turns a quiet night in into a battle for another world.', poster: 'assets/film-vr-poster.jpg', focal: '50% 50%', preview: 'assets/film-vr-preview.mp4', film: 'assets/films/vr-show.mp4', previewLength: 0, captions: '' },
-        { id: 'the-systems-compass', title: 'The Systems Compass', type: 'Science-fiction film', year: '', role: 'AI filmmaking',
-          description: 'A speculative vision of people, technology and the systems shaping tomorrow.', poster: 'assets/film-systems-poster.jpg', focal: '50% 50%', preview: 'assets/film-systems-preview.mp4', film: 'assets/films/the-systems-compass.mp4', previewLength: 0, captions: '' },
-        { id: 'samurai', title: 'Dragonfall', type: 'Cinematic short', year: '', role: 'AI filmmaking',
-          description: 'A lone warrior meets a force larger than legend beneath a storm-dark sky.', poster: 'assets/film-samurai-poster.jpg', focal: '50% 50%', preview: 'assets/film-samurai-preview.mp4', film: 'assets/films/samurai.mp4', previewLength: 0, captions: '' }
-      ]
-    },
-    { id: 'commercials', number: '02', title: 'Commercials',
+    { id: 'commercials', number: '01', title: 'Commercials',
       projects: [
         { id: 'one-last-message', title: 'One Last Message', type: 'Commercial film', year: '', role: 'AI filmmaking',
           description: 'A quiet story about distance, memory and the message that still connects us.', poster: 'assets/film-message-poster.jpg', focal: '50% 50%', preview: 'assets/film-message-preview.mp4', film: 'assets/films/one-last-message.mp4', previewLength: 0, captions: '' },
@@ -46,7 +36,7 @@ window.PORTFOLIO = {
           description: 'An automotive journey that bends landscape, motion and possibility.', poster: 'assets/commercial-impossible-drive-poster.jpg?v=2', focal: '50% 50%', preview: 'assets/commercial-impossible-drive-preview.mp4?v=2', film: 'assets/films/the-impossible-drive.mp4', previewLength: 0, captions: '' }
       ]
     },
-    { id: 'short-form', number: '03', title: 'Short-form',
+    { id: 'short-form', number: '02', title: 'Short-form',
       projects: [
         { id: 'bed', title: 'The Bed Commute', type: 'Short-form', year: '', role: 'AI image & motion', description: 'Too comfortable to get up, he takes his bed all the way to the office.', poster: 'assets/short-bed-poster.jpg', focal: '50% 50%', preview: 'assets/short-bed-preview.mp4', film: 'assets/films/bed.mp4', previewLength: 0, captions: '' },
         { id: 'bubble-world', title: 'Bubblegum ’90s', type: 'Short-form', year: '', role: 'AI image & motion', description: 'A ’90s school hallway, one giant bubble and all the space she needs.', poster: 'assets/short-bubble-world-poster.jpg?v=5', focal: '50% 50%', preview: 'assets/short-bubble-world-preview.mp4?v=5', film: 'assets/films/bubble-world.mp4', previewLength: 0, captions: '' },
@@ -59,6 +49,16 @@ window.PORTFOLIO = {
         { id: 'eyewear', title: 'City Frames', type: 'Fashion motion', year: '', role: 'AI image & motion', description: 'Eyewear becomes character through clean framing and controlled motion.', poster: 'assets/short-eyewear-poster.jpg', focal: '50% 50%', preview: 'assets/short-eyewear-preview.mp4', film: 'assets/films/eyewear.mp4', previewLength: 0, captions: '' },
         { id: 'flavor-switch', title: 'Mixed Up', type: 'Product motion', year: '', role: 'AI image & motion', description: 'One visual gesture changes the product, colour and entire mood.', poster: 'assets/short-flavor-switch-poster.jpg?v=2', focal: '50% 50%', preview: 'assets/short-flavor-switch-preview.mp4?v=2', film: 'assets/films/flavor-switch.mp4', previewLength: 0, captions: '' },
         { id: 'luxury-real-estate', title: 'Skyline Residence', type: 'Architecture motion', year: '', role: 'AI image & motion', description: 'Light and architecture guide a compact tour through modern luxury.', poster: 'assets/short-luxury-real-estate-poster.jpg', focal: '50% 50%', preview: 'assets/short-luxury-real-estate-preview.mp4', film: 'assets/films/luxury-real-estate.mp4', previewLength: 0, captions: '' }
+      ]
+    },
+    { id: 'films', number: '03', title: 'Films',
+      projects: [
+        { id: 'vr-show', title: 'Virtual Legend', type: 'Visual narrative', year: '', role: 'AI filmmaking',
+          description: 'A new VR headset turns a quiet night in into a battle for another world.', poster: 'assets/film-vr-poster.jpg', focal: '50% 50%', preview: 'assets/film-vr-preview.mp4', film: 'assets/films/vr-show.mp4', previewLength: 0, captions: '' },
+        { id: 'the-systems-compass', title: 'The Systems Compass', type: 'Science-fiction film', year: '', role: 'AI filmmaking',
+          description: 'A speculative vision of people, technology and the systems shaping tomorrow.', poster: 'assets/film-systems-poster.jpg', focal: '50% 50%', preview: 'assets/film-systems-preview.mp4', film: 'assets/films/the-systems-compass.mp4', previewLength: 0, captions: '' },
+        { id: 'samurai', title: 'Dragonfall', type: 'Cinematic short', year: '', role: 'AI filmmaking',
+          description: 'A lone warrior meets a force larger than legend beneath a storm-dark sky.', poster: 'assets/film-samurai-poster.jpg', focal: '50% 50%', preview: 'assets/film-samurai-preview.mp4', film: 'assets/films/samurai.mp4', previewLength: 0, captions: '' }
       ]
     }
   ]
