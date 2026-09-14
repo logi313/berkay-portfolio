@@ -10,7 +10,8 @@
   const connection = navigator.connection;
   // Data Saver keeps preview loops from downloading; posters still show.
   const motionPaused = !!connection?.saveData;
-  let activeScene = null, activeProject = null, returnFocus = null, returnHash = '#top', toastTimer;
+  let activeScene = null, activeProject = null, returnFocus = null, toastTimer;
+  const cleanURL = location.pathname + location.search;
   const projects = new Map(), sections = new Map();
   projects.set('showreel', { ...data.showreel, id: 'showreel', category: 'Showreel' });
   data.categories.forEach((cat, ci) => {
@@ -212,7 +213,7 @@
   function openProject(id, trigger, updateURL = true) {
     const item = projects.get(id); if (!item) return;
     if (!dialog.open) {
-      returnFocus = trigger || document.activeElement; returnHash = item.section ? '#' + item.section : '#top';
+      returnFocus = trigger || document.activeElement;
       dialog.showModal(); document.body.classList.add('modal-open');
     }
     activeProject = id; syncMotion(); player.pause(); player.removeAttribute('src'); player.replaceChildren(); player.load(); $('.player-frame')?.remove(); filmMode(false);
@@ -236,14 +237,14 @@
       if (item.captions) { const track = document.createElement('track');track.kind='captions';track.src=item.captions;track.srclang=item.captionLanguage || 'en';track.label=item.captionLabel || 'English';player.append(track); }
       player.load(); player.play().catch(() => { /* Native controls remain available when autoplay is blocked. */ });
     } else setNotice('Film coming soon', 'A first look at the visual world.');
-    if (updateURL) history.pushState({project:id}, '', '#project/' + encodeURIComponent(id));
+    if (updateURL) history.pushState({project:id}, '', cleanURL);
     $('.dialog-close').focus({ preventScroll: true });
   }
   function closeProject(updateURL = true) {
     if (!dialog.open) return;
     exitFullscreen(); player.pause(); player.removeAttribute('src'); player.load(); $('.player-frame')?.remove(); filmMode(false);
     dialog.close(); document.body.classList.remove('modal-open'); activeProject = null;
-    if (updateURL) history.replaceState(null, '', returnHash);
+    if (updateURL) history.replaceState(null, '', cleanURL);
     syncMotion();
     if (returnFocus?.isConnected && returnFocus !== document.body) returnFocus.focus({preventScroll:true});
   }
@@ -371,7 +372,7 @@
   }
   $$('.pager-card').forEach(card => card.addEventListener('click', () => {
     const target = card.dataset.project;
-    openProject(target, null, false); history.replaceState({project:target}, '', '#project/' + encodeURIComponent(target));
+    openProject(target, null, false); history.replaceState({project:target}, '', cleanURL);
   }));
   $$('[data-open]').forEach(button => button.addEventListener('click', () => openProject(button.dataset.open, button)));
   function route() {
@@ -383,9 +384,31 @@
       }
       if (!dialog.open) document.getElementById(item.section || 'top')?.scrollIntoView({behavior:'instant'});
       openProject(id, null, false);
+      history.replaceState({project:id}, '', cleanURL);
     } else if (dialog.open) closeProject(false);
+    if (location.hash) {
+      const anchor = document.getElementById(location.hash.slice(1));
+      if (anchor?.classList.contains('scene-anchor')) requestAnimationFrame(() => anchor.scrollIntoView({behavior:'instant'}));
+      history.replaceState(null, '', cleanURL);
+    }
   }
   addEventListener('hashchange', route);
+  // The address bar always shows just the domain: section links scroll without writing #section,
+  // projects open on a history entry with the same URL, so Back still closes the film.
+  addEventListener('popstate', event => {
+    const id = event.state?.project;
+    if (id && projects.has(id)) openProject(id, null, false);
+    else if (dialog.open) closeProject(false);
+  });
+  document.addEventListener('click', event => {
+    const link = event.target.closest('a[href^="#"]');
+    if (!link || event.defaultPrevented || event.metaKey || event.ctrlKey || event.shiftKey) return;
+    const id = link.getAttribute('href').slice(1);
+    const target = id ? document.getElementById(id) : null;
+    event.preventDefault();
+    if (target) target.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});
+    if (link.closest('.skip-link')) target?.querySelector('a, button')?.focus({preventScroll:true});
+  });
   function toast(message) { clearTimeout(toastTimer); $('.toast').textContent = message;$('.toast').classList.add('visible');toastTimer=setTimeout(() => $('.toast').classList.remove('visible'), 2600); }
   $('.copy-email').addEventListener('click', async () => {
     let ok = false;
@@ -396,8 +419,4 @@
     toast(ok ? 'Email copied. Let’s make something.' : 'Select the email address to copy it.');
   });
   updateScroll(); route();
-  if (location.hash && !location.hash.startsWith('#project/')) {
-    const anchor = document.getElementById(location.hash.slice(1));
-    if (anchor?.classList.contains('scene-anchor')) requestAnimationFrame(() => anchor.scrollIntoView({behavior:'instant'}));
-  }
 })();
