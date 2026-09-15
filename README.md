@@ -93,3 +93,12 @@ Proje adresleri `/#project/vr-show` biçimindedir. Özel sunucu yönlendirmesi g
 - Başlıklarda Monument Extended Regular, gövde ve küçük arayüz metinlerinde Inter kullanılır. Fontlar yerel yüklenir; lisans notları `assets/monument-extended-LICENSE.txt` ve `assets/inter-LICENSE.txt` içindedir.
 
 Kontrol sonucu: `QA.md`.
+
+## Proje sayfaları ve arama motorları
+
+Her projenin Google'da ayrı bulunabilen kendi adresi var: `/work/<proje-adi>/` (örneğin `/work/the-impossible-drive/`).
+Bu sayfalar `index.html`'in kopyası; kendi başlığı, açıklaması, paylaşım görseli ve video bilgisi (VideoObject) var ve açılınca o filmi oynatır.
+`content.js` ya da `index.html` değişince bir üst klasördeki `build-work-pages.py` ile yeniden üret: `python build-work-pages.py`.
+Bu komut `sitemap.xml` dosyasını da (video bilgileriyle) yeniler.
+
+Kök klasördeki 32 karakterlik `.txt` dosyası IndexNow anahtarı: güncellemeleri Bing ve diğer arama motorlarına anında bildirmek için. Silme.
