@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://berkayalioglu.com/sitemap.xml
