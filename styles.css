@@ -313,3 +313,7 @@ a:focus-visible,button:focus-visible,video:focus-visible{outline-color:var(--pap
 
 /* Comfortable touch targets on phones without moving anything: the tap area grows, the layout does not. */
 @media(max-width:600px){.site-header .monogram,.email-link,.category-next{padding-block:12px;margin-block:-12px}}
+
+/* Social links under the email: same label style as the rest of the small type. */
+.social-links a{font-size:max(11px,calc(12 * var(--u)));font-weight:500;letter-spacing:.1em;text-transform:uppercase;transition:color .2s}
+.social-links a:hover,.social-links a:focus-visible{color:var(--acid)}
