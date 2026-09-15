@@ -33,7 +33,11 @@
     sections.set(cat.id, { element: section, cat, selected: 0 });
     const tabs = $$('.project-tab', section);
     tabs.forEach((button, i) => {
-      button.addEventListener('click', () => selectProject(cat.id, i));
+      // First tap on a project previews it in the section; tapping the one already showing opens its film.
+      button.addEventListener('click', () => {
+        if (sections.get(cat.id).selected === i) openProject(cat.projects[i].id, button);
+        else selectProject(cat.id, i);
+      });
       button.addEventListener('keydown', event => {
         let target;
         if (event.key === 'ArrowRight') target = (i + 1) % tabs.length;
