@@ -1,10 +1,231 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://berkayalioglu.com/</loc>
     <lastmod>2026-09-15</lastmod>
-    <image:image>
-      <image:loc>https://berkayalioglu.com/assets/share.jpg</image:loc>
-    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://berkayalioglu.com/assets/showreel-poster.jpg</video:thumbnail_loc>
+      <video:title>Berkay Alioglu — Showreel</video:title>
+      <video:description>A glimpse into my world of image and motion.</video:description>
+      <video:content_loc>https://berkayalioglu.com/assets/films/showreel.mp4</video:content_loc>
+      <video:duration>83</video:duration>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://berkayalioglu.com/work/one-last-message/</loc>
+    <lastmod>2026-09-15</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://berkayalioglu.com/assets/film-message-poster.jpg</video:thumbnail_loc>
+      <video:title>One Last Message</video:title>
+      <video:description>A grandmother’s voice message, kept for the day she’s gone.</video:description>
+      <video:content_loc>https://berkayalioglu.com/assets/films/one-last-message.mp4</video:content_loc>
+      <video:duration>120</video:duration>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://berkayalioglu.com/work/the-impossible-drive/</loc>
+    <lastmod>2026-09-15</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://berkayalioglu.com/assets/commercial-impossible-drive-poster.jpg</video:thumbnail_loc>
+      <video:title>The Impossible Drive</video:title>
+      <video:description>One message sets off a drive from city lights to a mountain sunset.</video:description>
+      <video:content_loc>https://berkayalioglu.com/assets/films/the-impossible-drive.mp4</video:content_loc>
+      <video:duration>53</video:duration>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://berkayalioglu.com/work/fix-this-plumbing/</loc>
+    <lastmod>2026-09-15</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://berkayalioglu.com/assets/commercial-fix-plumbing-poster.jpg</video:thumbnail_loc>
+      <video:title>Fix This Plumbing</video:title>
+      <video:description>A dripping tap floods the living room while he carries on as normal, until the plumber finally walks in.</video:description>
+      <video:content_loc>https://berkayalioglu.com/assets/films/fix-this-plumbing.mp4</video:content_loc>
+      <video:duration>32</video:duration>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://berkayalioglu.com/work/one-door-closed/</loc>
+    <lastmod>2026-09-15</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://berkayalioglu.com/assets/commercial-real-estate-poster.jpg</video:thumbnail_loc>
+      <video:title>One Door Closed</video:title>
+      <video:description>A home loan falls through, and a young couple finds another way home.</video:description>
+      <video:content_loc>https://berkayalioglu.com/assets/films/real-estate.mp4</video:content_loc>
+      <video:duration>34</video:duration>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://berkayalioglu.com/work/city-frames/</loc>
+    <lastmod>2026-09-15</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://berkayalioglu.com/assets/short-eyewear-poster.jpg</video:thumbnail_loc>
+      <video:title>City Frames</video:title>
+      <video:description>New frames, a new way to see the city.</video:description>
+      <video:content_loc>https://berkayalioglu.com/assets/films/eyewear.mp4</video:content_loc>
+      <video:duration>20</video:duration>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://berkayalioglu.com/work/through-the-lens/</loc>
+    <lastmod>2026-09-15</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://berkayalioglu.com/assets/short-camera-motion-poster.jpg</video:thumbnail_loc>
+      <video:title>Through the Lens</video:title>
+      <video:description>First light on the mountain, and the one frame worth keeping.</video:description>
+      <video:content_loc>https://berkayalioglu.com/assets/films/camera-motion.mp4</video:content_loc>
+      <video:duration>20</video:duration>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://berkayalioglu.com/work/poolside-sparkle/</loc>
+    <lastmod>2026-09-15</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://berkayalioglu.com/assets/short-drink-ad-poster.jpg</video:thumbnail_loc>
+      <video:title>Poolside Sparkle</video:title>
+      <video:description>A lazy afternoon on a pool float, and one ice-cold can.</video:description>
+      <video:content_loc>https://berkayalioglu.com/assets/films/drink-ad.mp4</video:content_loc>
+      <video:duration>20</video:duration>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://berkayalioglu.com/work/the-bed-commute/</loc>
+    <lastmod>2026-09-15</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://berkayalioglu.com/assets/short-bed-poster.jpg</video:thumbnail_loc>
+      <video:title>The Bed Commute</video:title>
+      <video:description>Too comfortable to get up, he takes his bed to the office.</video:description>
+      <video:content_loc>https://berkayalioglu.com/assets/films/bed.mp4</video:content_loc>
+      <video:duration>20</video:duration>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://berkayalioglu.com/work/summit-jacket/</loc>
+    <lastmod>2026-09-15</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://berkayalioglu.com/assets/short-coat-01-poster.jpg</video:thumbnail_loc>
+      <video:title>Summit Jacket</video:title>
+      <video:description>From desert rock to a summit above the clouds.</video:description>
+      <video:content_loc>https://berkayalioglu.com/assets/films/coat-01.mp4</video:content_loc>
+      <video:duration>20</video:duration>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://berkayalioglu.com/work/mixed-up/</loc>
+    <lastmod>2026-09-15</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://berkayalioglu.com/assets/short-flavor-switch-poster.jpg</video:thumbnail_loc>
+      <video:title>Mixed Up</video:title>
+      <video:description>One ice cream that can’t pick a flavour.</video:description>
+      <video:content_loc>https://berkayalioglu.com/assets/films/flavor-switch.mp4</video:content_loc>
+      <video:duration>20</video:duration>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://berkayalioglu.com/work/waterproof-trench/</loc>
+    <lastmod>2026-09-15</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://berkayalioglu.com/assets/short-coat-02-poster.jpg</video:thumbnail_loc>
+      <video:title>Waterproof Trench</video:title>
+      <video:description>A trench coat walks through a car wash and comes out dry.</video:description>
+      <video:content_loc>https://berkayalioglu.com/assets/films/coat-02.mp4</video:content_loc>
+      <video:duration>20</video:duration>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://berkayalioglu.com/work/bubblegum-90s/</loc>
+    <lastmod>2026-09-15</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://berkayalioglu.com/assets/short-bubble-world-poster.jpg</video:thumbnail_loc>
+      <video:title>Bubblegum ’90s</video:title>
+      <video:description>A ’90s school hallway and one giant bubble.</video:description>
+      <video:content_loc>https://berkayalioglu.com/assets/films/bubble-world.mp4</video:content_loc>
+      <video:duration>20</video:duration>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://berkayalioglu.com/work/double-smash/</loc>
+    <lastmod>2026-09-15</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://berkayalioglu.com/assets/short-burger-macro-poster.jpg</video:thumbnail_loc>
+      <video:title>Double Smash</video:title>
+      <video:description>Cheese, pickles and two smashed patties, stacked perfect.</video:description>
+      <video:content_loc>https://berkayalioglu.com/assets/films/burger-macro.mp4</video:content_loc>
+      <video:duration>20</video:duration>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://berkayalioglu.com/work/the-color-garage/</loc>
+    <lastmod>2026-09-15</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://berkayalioglu.com/assets/short-car-versions-poster.jpg</video:thumbnail_loc>
+      <video:title>The Color Garage</video:title>
+      <video:description>One sports car, three colours, three rooms of light.</video:description>
+      <video:content_loc>https://berkayalioglu.com/assets/films/car-versions.mp4</video:content_loc>
+      <video:duration>20</video:duration>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://berkayalioglu.com/work/skyline-residence/</loc>
+    <lastmod>2026-09-15</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://berkayalioglu.com/assets/short-luxury-real-estate-poster.jpg</video:thumbnail_loc>
+      <video:title>Skyline Residence</video:title>
+      <video:description>Warm light and a rooftop terrace above the city at night.</video:description>
+      <video:content_loc>https://berkayalioglu.com/assets/films/luxury-real-estate.mp4</video:content_loc>
+      <video:duration>20</video:duration>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://berkayalioglu.com/work/virtual-legend/</loc>
+    <lastmod>2026-09-15</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://berkayalioglu.com/assets/film-vr-poster.jpg</video:thumbnail_loc>
+      <video:title>Virtual Legend</video:title>
+      <video:description>A new VR headset turns a quiet night in into a battle for another world.</video:description>
+      <video:content_loc>https://berkayalioglu.com/assets/films/vr-show.mp4</video:content_loc>
+      <video:duration>151</video:duration>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://berkayalioglu.com/work/the-systems-compass/</loc>
+    <lastmod>2026-09-15</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://berkayalioglu.com/assets/film-systems-poster.jpg</video:thumbnail_loc>
+      <video:title>The Systems Compass</video:title>
+      <video:description>A trailer made for XPRIZE Futurevision.</video:description>
+      <video:content_loc>https://berkayalioglu.com/assets/films/the-systems-compass.mp4</video:content_loc>
+      <video:duration>193</video:duration>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://berkayalioglu.com/work/dragonfall/</loc>
+    <lastmod>2026-09-15</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://berkayalioglu.com/assets/film-samurai-poster.jpg</video:thumbnail_loc>
+      <video:title>Dragonfall</video:title>
+      <video:description>A lone warrior meets a force larger than legend beneath a storm-dark sky.</video:description>
+      <video:content_loc>https://berkayalioglu.com/assets/films/samurai.mp4</video:content_loc>
+      <video:duration>43</video:duration>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
 </urlset>

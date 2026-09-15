@@ -11,7 +11,9 @@
   // Data Saver keeps preview loops from downloading; posters still show.
   const motionPaused = !!connection?.saveData;
   let activeScene = null, activeProject = null, returnFocus = null, toastTimer;
-  const cleanURL = location.pathname + location.search;
+  // Project pages (/work/<slug>/) carry the project id; they open that film, and closing it returns to the home address.
+  const pageProject = document.documentElement.dataset.project || null;
+  const cleanURL = pageProject ? '/' : location.pathname + location.search;
   const projects = new Map(), sections = new Map();
   projects.set('showreel', { ...data.showreel, id: 'showreel', category: 'Showreel' });
   data.categories.forEach((cat, ci) => {
@@ -245,6 +247,7 @@
     exitFullscreen(); player.pause(); player.removeAttribute('src'); player.load(); $('.player-frame')?.remove(); filmMode(false);
     dialog.close(); document.body.classList.remove('modal-open'); activeProject = null;
     if (updateURL) history.replaceState(null, '', cleanURL);
+    if (pageProject && document.title !== 'Berkay Alioglu') document.title = 'Berkay Alioglu';
     syncMotion();
     if (returnFocus?.isConnected && returnFocus !== document.body) returnFocus.focus({preventScroll:true});
   }
@@ -375,8 +378,8 @@
     openProject(target, null, false); history.replaceState({project:target}, '', cleanURL);
   }));
   $$('[data-open]').forEach(button => button.addEventListener('click', () => openProject(button.dataset.open, button)));
-  function route() {
-    const id = location.hash.startsWith('#project/') ? decodeURIComponent(location.hash.slice(9)) : null;
+  function route(initial = false) {
+    const id = location.hash.startsWith('#project/') ? decodeURIComponent(location.hash.slice(9)) : initial ? pageProject : null;
     if (id && projects.has(id)) {
       const item = projects.get(id);
       if (item.section) {
@@ -384,7 +387,8 @@
       }
       if (!dialog.open) document.getElementById(item.section || 'top')?.scrollIntoView({behavior:'instant'});
       openProject(id, null, false);
-      history.replaceState({project:id}, '', cleanURL);
+      if (!(initial && id === pageProject)) history.replaceState({project:id}, '', cleanURL);
+      else history.replaceState({project:id}, '', location.pathname);
     } else if (dialog.open) closeProject(false);
     if (location.hash) {
       const anchor = document.getElementById(location.hash.slice(1));
@@ -392,7 +396,7 @@
       history.replaceState(null, '', cleanURL);
     }
   }
-  addEventListener('hashchange', route);
+  addEventListener('hashchange', () => route());
   // The address bar always shows just the domain: section links scroll without writing #section,
   // projects open on a history entry with the same URL, so Back still closes the film.
   addEventListener('popstate', event => {
@@ -418,5 +422,5 @@
     }
     toast(ok ? 'Email copied. Let’s make something.' : 'Select the email address to copy it.');
   });
-  updateScroll(); route();
+  updateScroll(); route(true);
 })();
