@@ -21,7 +21,7 @@ window.PORTFOLIO = {
     bio: 'I’m Berkay, an AI artist and filmmaker working across visual storytelling, advertising and experimental film.',
     approach: 'I use generative tools as part of the creative process from early concepts and visual development to motion and final frame.'
   },
-  socials: { Instagram: '', Vimeo: '', Behance: '', LinkedIn: '' },
+  socials: { LinkedIn: 'https://www.linkedin.com/in/berkayalioglu/' },
   categories: [
     { id: 'commercials', number: '01', title: 'Commercials',
       projects: [
